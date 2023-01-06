@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Js Handson-1</title>
+</head>
+<body>
+    <nav class="navbar"><h1>Operators & Expressions</h1></nav>
+    <div class="box">
+        <div class="leftbox">
+            <div class="in">
+                <h2>Q.Add two Numbers</h2>
+            <p>You are provided with two numbers A and B.Your task is to add these two numbers. <br>
+            <b>Note:</b>You have to complete <b>AddTwoNumbers</b> function. No need to take any input.</p>
+            <h2>Input Format</h2>
+            <p>The first line contains two integers A and B.</p>
+            <h2>Output Format</h2>
+            <p>Return the result after adding two numbers.</p>
+            <h2>Constraints</h2>
+            <p>1≤A,B≤500</p>
+            <h2>Time Limit</h2>
+            <p>1 second</p>
+            <h2>Example</h2>
+            <p>Sample Input <br>
+                2 5 <br>
+                Sample Output <br>
+                7 </p>
+            </div>
+        </div>
+<div class="rightbox">
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+    <pre>
+    1.const AddTwoNumbers = (a,b) => {
+    2.  return a + b
+    3.  };
+</pre>
+    </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+        <div class="leftbox">
+            <div class="in">
+            <h2>Q.Find if the conditions are obeyed or not?</h2>
+            <p>You are given two number first as A and second as B and check if both conditions<br>
+             ( A < 10 and A>B) are satisfied or not with the help of operators. <br>
+            <b>Note:</b>You have to complete <b>Is_Valid</b> function. No need to take any input.</p>
+            <h2>Input Format</h2>
+            <p>The first line contains two integers A and B</p>
+            <h2>Output Format</h2>
+            <p>Return the result as true if the given condition gets satisfied, else false.</p>
+            <h2>Constraints</h2>
+            <p>1≤A,B≤500</p>
+            <h2>Time Limit</h2>
+            <p>1 second</p>
+            <h2>Example</h2>
+            <p>Sample Input <br>
+                5 3<br>
+                Sample Output <br>
+                true </p>
+            </div>
+        </div>
+<div class="rightbox">
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+    <pre>
+    1.const Is_Valid = (a,b) => {
+    2.  if(a<10 & a>b){
+    3.      return "true"
+    4.    }
+    5.  else{
+    6.    return "false"
+    7.  }
+    8. };
+</pre>
+    </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+        <div class="leftbox">
+            <div class="in">
+            <h2>Q.Check the conditons</h2>
+            <p>You are given two numbers A and B. You need to do the following checks:<br>
+            1.if both are divisible by 10 console true. <br>
+            2.if both are not divisible by 10 console false. <br>
+            3.if one of them only is divisible by 10 console true. <br>
+            Use operator to do this. <br>
+            <b>Note:</b>You have to complete <b>Check</b> function. No need to take any input.</p>
+            <h2>Input Format</h2>
+            <p>The first line contains two natural numbers A and B</p>
+            <h2>Output Format</h2>
+            <p>Return the required result.</p>
+            <h2>Constraints</h2>
+            <p>1≤A,B≤10000</p>
+            <h2>Time Limit</h2>
+            <p>1 second</p>
+            <h2>Example</h2>
+            <p>Sample Input <br>
+                12 20<br>
+                Sample Output <br>
+                true </p>
+            </div>
+        </div>
+<div class="rightbox">
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+    <pre>
+    1.const Check = (A, B) => 
+    2.  {
+    3.    if(A%10===0 || B%10===0){
+    4.      return "true"
+    5.    }  
+    6.    else{
+    7.      return "false"
+    8.    }
+    9.  };
+</pre>
+    </div>
+    </div>
+    <!-- --------------------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+        <div class="leftbox">
+            <div class="in">
+            <h2>Q.Find the first digit of a 4 digit number</h2>
+            <p>You are provided a four digit number N only. Your task is to print out the first digit of that<br>
+                number. <br>
+            <b>Note:</b>You have to complete <b>First_Digit</b> function. No need to take any input.</p>
+            <h2>Input Format</h2>
+            <p>The first line contains one four digit natural number N.</p>
+            <h2>Output Format</h2>
+            <p>Return the required result.</p>
+            <h2>Constraints</h2>
+            <p>1000≤A,B≤9999</p>
+            <h2>Time Limit</h2>
+            <p>1 second</p>
+            <h2>Example</h2>
+            <p>Sample Input <br>
+                4567<br>
+                Sample Output <br>
+                4 </p>
+            </div>
+        </div>
+<div class="rightbox">
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+    <pre>
+    1.const First_Digit = (n) => {
+    2.    return parseInt(n/1000);
+    3. };
+</pre>
+    </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+        <div class="leftbox">
+            <div class="in">
+            <h2>Q.Find the last digit of a 4 digit number</h2>
+            <p>You are provided a four digit number N only. Your task is to print out the last digit of that<br>
+                number. <br>
+            <b>Note:</b>You have to complete <b>Last_Digit</b> function. No need to take any input.</p>
+            <h2>Input Format</h2>
+            <p>The first line contains one four digit natural number N.</p>
+            <h2>Output Format</h2>
+            <p>Return the required result.</p>
+            <h2>Constraints</h2>
+            <p>1000≤A,B≤9999</p>
+            <h2>Time Limit</h2>
+            <p>1 second</p>
+            <h2>Example</h2>
+            <p>Sample Input <br>
+                4567<br>
+                Sample Output <br>
+                7 </p>
+            </div>
+        </div>
+<div class="rightbox">
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+    <pre>
+    1.const Last_Digit = (n) => {
+    2.    return n%10;
+    3. };
+</pre>
+    </div>
+    </div>
+    <!-- --------------------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+        <div class="leftbox">
+            <div class="in">
+            <h2>Q.Find the remainder</h2>
+            <p>You are provided with two numbers A and B where A as  divisor and B as <br>
+                dividend.Your task is find the remainder. <br>
+            <b>Note:</b>You have to complete <b>Find_the_remainder</b> function. No need to take any input.</p>
+            <h2>Input Format</h2>
+            <p>The first line of the input contains two integers A and B.</p>
+            <h2>Output Format</h2>
+            <p>Return the result after finding the remainder.</p>
+            <h2>Constraints</h2>
+            <p>1 ≤ A,B ≤ 1000</p>
+            <h2>Time Limit</h2>
+            <p>1 second</p>
+            <h2>Example</h2>
+            <p>Sample Input <br>
+                2 9<br>
+                Sample Output <br>
+                1</p>
+            </div>
+        </div>
+<div class="rightbox">
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+    <pre>
+    1.const Find_the_remainder = (a,b) => {
+    2.    return b%a;
+    3.  };
+</pre>
+    </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+        <div class="leftbox">
+            <div class="in">
+            <h2>Q.Multipy two Numbers</h2>
+            <p>You are provided with two numbers A and B. Your task is to multiply these two<br>
+                numbers. <br>
+            <b>Note:</b>You have to complete <b>Multiply_two_number </b> function. No need to take any input.</p>
+            <h2>Input Format</h2>
+            <p>The first line contains two integers A and B.</p>
+            <h2>Output Format</h2>
+            <p>Return the result after multiplying two numbers.</p>
+            <h2>Constraints</h2>
+            <p>1≤A,B≤30</p>
+            <h2>Time Limit</h2>
+            <p>1 second</p>
+            <h2>Example</h2>
+            <p>Sample Input <br>
+                2  5<br>
+                Sample Output <br>
+                10 </p>
+            </div>
+        </div>
+<div class="rightbox">
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+    <pre>
+    1.const Multiply_two_number = (a,b) => {
+    2.    return a*b;
+    3.};
+</pre>
+    </div>
+    </div>
+    <!-- --------------------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+        <div class="leftbox">
+            <div class="in">
+            <h2>Q.Marks Calculator</h2>
+            <p>Shyam has got his marks in three subjects as A, B, and C (out of 100).Write a program<br>
+                to calculate his total marks and his average. <br>
+            <b>Note:</b>You have to complete <b>Sum</b> and <b> Average </b> function. No need to take any input.</p>
+            <h2>Input Format</h2>
+            <p>The input contains three numbers A, B and C.</p>
+            <h2>Output Format</h2>
+            <p>Return the required result.</p>
+            <h2>Constraints</h2>
+            <p>0≤A,B,C≤100</p>
+            <h2>Time Limit</h2>
+            <p>1 second</p>
+            <h2>Example</h2>
+            <p>Sample Input <br>
+                50 20 100<br>
+                Sample Output <br>
+                170 <br>
+                56.67 </p>
+            </div>
+        </div>
+<div class="rightbox">
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+    <pre>
+    1.const Sum = (A, B, C) => 
+    2.{
+    3. return A+B+C;
+    4.};
+    5.
+    6.const Average = (A, B, C) => 
+    7.{
+    8. return (A+B+C)/3;
+    9.};
+</pre>
+    </div>
+    </div>
+</body>
+</html>

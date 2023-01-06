@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.navbar{
+    width: 99%;
+    height: 10%;
+    text-align: center;
+    border: 5px solid black;
+    font-size: 30px;
+}
+.box{
+    width: 97vw;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    margin: 10px;
+}
+.leftbox{
+    margin:30px;
+    width: 50%;
+}
+.rightbox{
+    width: 50vw;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+p,li{
+    font-size: 20px;
+}

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Handson 2</title>
+</head>
+<body>
+    <nav class="navbar"><h1>Decision Making</h1></nav>
+    <div class="box">
+        <div class="leftbox">
+            <div class="in">
+                <h2>Q.Calculator</h2>
+            <p>Write a program to make a simple calculator using switch statement that takes<br>
+                operator and two numbers from user and print the result after operation. <br>
+            <b>Note:</b>You have to complete <b>Calculator</b>. No need to take any input.</p>
+            <h2>Input Format</h2>
+            <p>The input contains a operator symbol (+,−,∗,/) along with two natural numbers B <br>
+             and C.</p>
+            <h2>Output Format</h2>
+            <p>Return the required result</p>
+            <h2>Constraints</h2>
+            <p>1≤B,C≤1000</p>
+            <h2>Time Limit</h2>
+            <p>1 second</p>
+            <h2>Example</h2>
+            <p>Sample Input <br>
+                + 1 2 <br>
+                Sample Output <br>
+                3 </p>
+            </div>
+        </div>
+<div class="rightbox">
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+    <pre>
+    1.const Calculator = (A, B, C) => 
+    2.{
+    3.    switch(A) {
+    4.    case "+":
+    5.      return (B + C);
+    6.      break;
+    7.    case "-":
+    8.      return (B - C);
+    9.      break;
+    10.   case "*":
+    11.     return (B * C);
+    12.     break;
+    13.   case "/":
+    14.     return (B / C);
+    15.     break;
+    16.   default:
+    17.     return ("Invalid operator");
+    18.} 
+    19.};
+</pre>
+    </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+        <div class="leftbox">
+            <div class="in">
+                <h2>Q.Check whether the condition is fulfilled or not?</h2>
+            <p>Write a program that takes a number and prints whether the number is divisible by 6<br>
+                and 9 or not. <br>
+            <b>Note:</b>You have to complete <b>Check_divisibility</b>. No need to take any input.</p>
+            <h2>Input Format</h2>
+            <p>The input contains a single number N.</p>
+            <h2>Output Format</h2>
+            <p>If the condition is satisfied return "Divisible by both" (without quotes) else return "Not <br>
+               Divisible by both" (without quotes). </p>
+            <h2>Constraints</h2>
+            <p>1≤N≤10000</p>
+            <h2>Time Limit</h2>
+            <p>1 second</p>
+            <h2>Example</h2>
+            <p>Sample Input 1 <br>
+                36 <br>
+                Sample Output 1 <br>
+                Divisible by both <br>
+                Sample Input 2 <br>
+                27 <br>
+                Sample Output 2 <br>
+                Not Divisible by both</p>
+            </div>
+        </div>
+<div class="rightbox">
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+    <pre>
+    1.const Check_divisibility = (N) => {
+    2.  if((N%6===0) && (N % 9 ===0)){
+    3.    return 'Divisible by both';
+    4.  }
+    5.  else{
+    6.    return 'Not Divisible by both';
+    7.  }
+    8.    
+    9.};
+</pre>
+    </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+        <div class="leftbox">
+            <div class="in">
+                <h2>Q.Eligible Voter</h2>
+            <p>You are given an integer A,denoting the age of a person, and your task is to determine<br>
+                whether he/she is eligible to vote or not. <br>
+            <b>Note:</b>You have to complete <b>isEligible function</b>. No need to take any input.</p>
+            <h2>Input Format</h2>
+            <p>The first and the only line of the input contains an integer A, representing the age of a <br>
+                person.</p>
+            <h2>Output Format</h2>
+            <p>If the person is eligible to vote, return "Eligible for Voting" otherwise, return "Not Eligible <br>
+                for Voting" (without quotes). </p>
+            <h2>Constraints</h2>
+            <p>0≤A≤120</p>
+            <h2>Time Limit</h2>
+            <p>1 second</p>
+            <h2>Example</h2>
+            <p>Sample Input 1 <br>
+                13 <br>
+                Sample Output 1 <br>
+                Not Eligible for Voting </p>
+            </div>
+        </div>
+<div class="rightbox">
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+    <pre>
+    1.const isEligible = (a) => {
+    2.  if(a>=18){
+    3.    return 'Eligible for Voting';
+    4.  }
+    5.  else{
+    6.    return 'Not Eligible for Voting';
+    7.  }
+    8.};
+</pre>
+    </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+        <div class="leftbox">
+            <div class="in">
+                <h2>Q.Find Relation</h2>
+            <p>PrepBuddy wants you to get familiar with various Relational operators. He provides you<br>
+                with two integer values X and Y and asks you to find the relation between them. <br>
+                The relationships between integers X and Y are as follows: </p>
+            <ul>
+            <li>If X < Y, it means that X is smaller than Y.</li>
+            <li>If X > Y, it means that X is greater than Y.</li>
+            <li>If X = Y, it means that X is equal to Y.</li>
+            </ul>
+            <p><b>Note:</b>You have to complete <b>findRelationship function</b>. No need to take any input.</p>
+            <h2>Input Format</h2>
+            <p>The first and the only line of the input contains two space-separated integers X and Y,<br>
+                denoting the integers which PrepBuddy gives you.</p>
+            <h2>Output Format</h2>
+            <p>Return the relationship between the integers that PrepBuddy gave you.</p>
+            <h2>Constraints</h2>
+            <p>1≤X,Y≤500</p>
+            <h2>Time Limit</h2>
+            <p>1 second</p>
+            <h2>Example</h2>
+            <p>Sample Input 1 <br>
+                3 11 <br>
+                Sample Output 1 <br>
+                3 is smaller than 11 </p>
+            </div>
+        </div>
+<div class="rightbox">
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+    <pre>
+    1.const findRelation = (x,y) => {
+    2.  if(x===y){
+    3.    return  x +' is equal to '+ y;
+    4.  }
+    5.  else{
+    6.    if(x>y){
+    7.    return x + ' is greater than '+ y;
+    8.  }
+    9.  else{
+    10.   return x + ' is smaller than '+ y;
+    11. }
+    12. }
+    13. };
+</pre>
+    </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+        <div class="leftbox">
+            <div class="in">
+                <h2>Q.Find Grades</h2>
+            <p>Your school has the following grading system based upon the marks(M) obtained by a<br>
+                student:</p>
+            <ul>
+            <li>If M≤10, the grade will be E.</li>
+            <li>If 11≥M≤20, the grade will be D.</li>
+            <li>If 21≥M≤30, the grade will be C.</li>
+            <li>If 31≥M≤40, the grade will be B.</li>
+            <li>If 41≥M≤50, the grade will be A.</li>
+            </ul>
+            <p>Your friend will enter his marks out of 50, and your task is to print his grades using a <br>
+                switch statement. <br>
+                <b>Note:</b>You have to complete <b>findGrades function</b>. No need to take any input.</p>
+            <h2>Input Format</h2>
+            <p>The first and the only line of the input contains an integer M, representing the marks <br>
+                that your friend will enter in the grading system.</p>
+            <h2>Output Format</h2>
+            <p>Return the grade obtained by your friend.</p>
+            <h2>Constraints</h2>
+            <p>0≤M≤50</p>
+            <h2>Time Limit</h2>
+            <p>1 second</p>
+            <h2>Example</h2>
+            <p>Sample Input 1 <br>
+                1 <br>
+                Sample Output 1 <br>
+                E</p>
+            </div>
+        </div>
+<div class="rightbox">
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+    <pre>
+    1.const findGrades = (a) => {
+    2.  var grade = 0; 
+    3.  if(a<=10)
+    4.  {
+    5.    grade = 1;
+    6.  }
+    7.  if(a>=11 && a<=20)
+    8.  {
+    9.    grade = 2;
+    10. }
+    11.  if(a>=21 && a<=30)
+    12. {
+    13.   grade = 3;
+    14. }
+    15. if(a>=31 && a<=40)
+    16. {
+    17.   grade = 4;
+    18. }
+    19. if(a>=41 && a<=50)
+    20. {
+    21.   grade = 5;
+    22. }
+    23. switch(grade)
+    24. {
+    25.   case 1 :
+    26.     return 'E';
+    27.     break;
+    28.   case 2 : 
+    29.     return 'D';
+    30.     break;
+    31.   case 3 : 
+    32.     return 'C';
+    33.     break;
+    34.   case 4 : 
+    35.     return 'B';
+    36.     break;
+    37.   case 5 : 
+    38.     return 'A';
+    39.     break;
+    40. }
+    41.};
+</pre>
+    </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+        <div class="leftbox">
+            <div class="in">
+                <h2>Q.Get Value</h2>
+            <p>You are provided with a table containing some characters and their corresponding<br>
+                values. Your task will be to find the value from the table corresponding to an input <br>
+                character and return it. </p>
+            <pre>
+                | P or p 	- PrepBytes      	|
+                | Z or z 	- Zenith         	|
+                | E or e 	- Expert Coder   	|
+                | D or d 	- Data Structure 	|
+            </pre>
+            <p><b>Note:</b>You have to complete <b>getValue function</b>. No need to take any input.</p>
+            <h2>Input Format</h2>
+            <p>The first and the only line of the input contains a character C, representing the<br>
+                character that you will get in input.</p>
+            <h2>Output Format</h2>
+            <p>Return the value corresponding to the input character.</p>
+            <h2>Constraints</h2>
+            <p>C will be one of the following characters: [P,p,Z,z,E,e,D,d].</p>
+            <h2>Time Limit</h2>
+            <p>1 second</p>
+            <h2>Example</h2>
+            <p>Sample Input 1 <br>
+                E <br>
+                Sample Output 1 <br>
+                Expert Coder </p>
+            </div>
+        </div>
+<div class="rightbox">
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+    <pre>
+    1.const getValue = (a) => {
+    2.  var c ;
+    3.    if(a=='P' || a=='p')
+    4.  {
+    5.    c = 1;
+    6.  }
+    7.  if(a=='Z' || a=='z')
+    8.  {
+    9.    c = 2;
+    10.  }
+    11. if(a=='E' || a=='e')
+    12. {
+    13.   c = 3;
+    14. }
+    15. if(a=='D' || a=='d')
+    16. {
+    17.   c = 4;
+    18. }
+    19. switch(c)
+    20. {
+    21.   case 1 :
+    22.     return 'PrepBytes';
+    23.   case 2 : 
+    24.     return 'Zenith';
+    25.   case 3 : 
+    26.     return 'Expert Coder';
+    27.   case 4 : 
+    28.     return 'Data Structure';
+    29. }
+    30. console.log(c);
+    31.};
+</pre>
+    </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+        <div class="leftbox">
+            <div class="in">
+                <h2>Q.Find the maximum out of three numbers.</h2>
+            <p>Take three numbers and print the largest number among them if all of three are same<br>
+                print -1. </p>
+            <p><b>Note:</b>You have to complete <b>Max_out_of_three</b>. No need to take any input.</p>
+            <h2>Input Format</h2>
+            <p>The input contains three numbers A, B and C.</p>
+            <h2>Output Format</h2>
+            <p>Return the maximum number out of the three numbers as result.</p>
+            <h2>Constraints</h2>
+            <p>1≤A,B,C≤10000</p>
+            <h2>Time Limit</h2>
+            <p>1 second</p>
+            <h2>Example</h2>
+            <p>Sample Input 1 <br>
+                2 5 4 <br>
+                Sample Output 1 <br>
+                5 </p>
+            </div>
+        </div>
+<div class="rightbox">
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+    <pre>
+    1.const Max_out_of_three = (A,B,C) => {
+    2.  if((A==B) && (A==C))
+    3.  {
+    4.    return -1;
+    5.  }
+    6.  
+    7.  if((A>B) && (A>C))
+    8.  {
+    9.    return A;
+    10.  }
+    11. if((B>C) && (B>A))
+    12. {
+    13.   return B;
+    14. }
+    15. if((C>A) && (C>B))
+    16. {
+    17.   return C;
+    18. }
+    19. };
+</pre>
+    </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+        <div class="leftbox">
+            <div class="in">
+                <h2>Q.Second Smallest</h2>
+            <p>You are given 3 distinct integers X,Y, and Z, and your task is to find and return the<br>
+                second smallest integer among the three provided integers. </p>
+            <p><b>Note:</b>You have to complete <b>findSndSmallest function</b>. No need to take any input.</p>
+            <h2>Input Format</h2>
+            <p>The first and the only line of the input contains three space-separated integers X,Y, <br>
+            and Z.denoting the integers among which you have to find the second smallest element. </p>
+            <h2>Output Format</h2>
+            <p>Return the second smallest integer among the three integers given to you.</p>
+            <h2>Constraints</h2>
+            <p>1≤X,Y,Z≤500 <br>
+                X!=Y, Y!=Z, X!=Z</p>
+            <h2>Time Limit</h2>
+            <p>1 second</p>
+            <h2>Example</h2>
+            <p>Sample Input 1 <br>
+                2 9 23 <br>
+                Sample Output 1 <br>
+                9 </p>
+            </div>
+        </div>
+<div class="rightbox">
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+    <pre>
+    1.const findSndSmallest = (x,y,z) => {
+    2.  if (x>y && x>z){
+    3.    if(y>z){
+    4.      return y;
+    5.    }
+    6.    else{
+    7.      return z;
+    8.    }
+    9.  }
+    10.  if (y>x && y>z){
+    11.   if(x>z){
+    12.     return x;
+    13.   }
+    14.   else{
+    15.     return z;
+    16.   }
+    17. }
+    18. if (z>x && z>y){
+    19.   if(y>x){
+    20.     return y;
+    21.   }
+    22.   else{
+    23.     return x;
+    24.   }
+    25. }
+    26. 
+    27. };
+</pre>
+    </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+        <div class="leftbox">
+            <div class="in">
+                <h2>Q.Check whether the triangle is Acute or Obtuse</h2>
+            <p>Write a program takes takes three angles and checks whether the triangle is acute or<br>
+                obtuse. </p>
+            <p><b>Note:</b>You have to complete <b>Triangle_Check</b>. No need to take any input.</p>
+            <h2>Input Format</h2>
+            <p>The input contains three numbers A, B and C.which denotes the angles of a triangle. </p>
+            <h2>Output Format</h2>
+            <p>Return the required result.</p>
+            <h2>Constraints</h2>
+            <p>0≤A,B,C≤180</p>
+            <h2>Time Limit</h2>
+            <p>1 second</p>
+            <h2>Example</h2>
+            <p>Sample Input 1 <br>
+                60 100 20 <br>
+                Sample Output 1 <br>
+                obtuse </p>
+            </div>
+        </div>
+<div class="rightbox">
+    <h2> &nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+    <pre>
+    1.const Triangle_Check = (A,B,C) => {
+    2.  if (A + B + C === 180) {
+    3.        if (A > 90 || B > 90 || C > 90) {
+    4.            return "obtuse";
+    5.        }
+    6.        else {
+    7.          return 'acute';
+    8.        }
+    9.    } 
+    10.};
+</pre>
+    </div>
+    </div>
+</body>
+</html>

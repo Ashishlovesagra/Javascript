@@ -684,17 +684,17 @@
         <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
 <pre>
     1.function Birthday_Game(arr,D ,M) {
-    2.    let ways = 0;
-    3.    for (let i = 0; i <= arr.length - M; i++) {
-    4.    let sum = 0;
-    5.    for (let j = i; j < i + M; j++) {
-    6.      sum += arr[j];
-    7.    }
-    8.    if (sum === D) {
-    9.      ways++;
-    10.   }
-    11.  }
-    12.  return ways;
+    2.let ways = 0;
+    3.for (let i = 0; i <= arr.length - M; i++) {
+    4.let sum = 0;
+    5.for (let j = i; j < i + M; j++) {
+    6.sum += arr[j];
+    7.}
+    8.if (sum === D) {
+    9.ways++;
+    10.}
+    11.}
+    12.return ways;
     13.}
 </pre>
       </div>

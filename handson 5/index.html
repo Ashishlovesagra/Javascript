@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Handson-5</title>
+  </head>
+  <body>
+    <nav class="navbar"><h1>Strings</h1></nav>
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Count Characters</h2>
+          <p>
+            You are given a string S , and your task is to return an array B (
+            having a size of 2 ) , <br />
+            where B [ 0 ] contains the count of character A (uppercase) in
+            string S and B [ 1 ] <br />
+            contains the count of character D (uppercase) in string S. <br />
+            <b>Note:</b>You have to complete <b>countCharacters function</b>. No
+            need to take any input.
+          </p>
+          <h2>Input Format</h2>
+          <p>The first and the only line of the input contains a string S .</p>
+          <h2>Output Format</h2>
+          <p>Return array B as output.</p>
+          <h2>Constraints</h2>
+          <p>
+            1 ≤ | S | ≤ 100 , where | S | denotes the length of string S .
+            <br />
+            S contains both lowercase and uppercase alphabets.
+          </p>
+          <h2>Time Limit</h2>
+          <p>1 second</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input <br />
+            AbaDd <br />
+            Sample Output <br />
+            11
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.const countCharacters = (S) => 
+    2.{
+    3.let B = [0, 0];
+    4.  for (let i = 0; i < S.length; i++) {
+    5.      if (S[i] === 'A') {
+    6.          B[0]++;
+    7.      } else if (S[i] === 'D') {
+    8.          B[1]++;
+    9.      }
+    10.  }
+    11. return B;  
+    12.};
+</pre
+        >
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Count the Heads</h2>
+          <p>
+            Tina is given a string S which contains the first letter of all the
+            student names in her class. She got a curiosity to check how many
+            people have their names starting from the same alphabet. So given a
+            string S , she decided to write a code that finds out the count of
+            characters that occur more than once in the string. <br />
+            <b>Note:</b>You have to complete <b>Count Head function</b>. No need
+            to take any input.
+          </p>
+          <h2>Input Format</h2>
+          <p>
+            The first and the only line of the input contains a string S (with
+            no space and contains only lowercase letters).
+          </p>
+          <h2>Output Format</h2>
+          <p>
+            Return updated String S as output, where the string contains the
+            charcter followed by their occurrence(if greater than 1) in
+            alphabetical order.
+          </p>
+          <h2>Constraints</h2>
+          <p>
+            1 ≤ | S | ≤ 100 , where | S | denotes the length of string S .
+            <br />
+            S contains only lowercase alphabets.
+          </p>
+          <h2>Time Limit</h2>
+          <p>1 second</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input <br />
+            prepbytes <br />
+            Sample Output <br />
+            e2p2
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.  var Count_Occ = (s) => 
+    2.{
+    3.let n=s.length;
+    4.  let str = s.split("").sort().join("");
+    5.  let ans="";
+    6.  for(let i=0;i&lt;n;i++) {
+    7.    let count =0;
+    8.    for(let j=0;j&lt;n;j++) {
+    9.      if(str[i]===str[j] && i>j) {
+    10.        break;
+    11.     }
+    12.     if(str[i]===str[j]) {
+    13.       count+=1;
+    14.     }
+    15.   }
+    16.   if(count>1) {
+    17.     ans+=str[i]+count;
+    18.   }
+    19. }
+    20. return ans;
+    21.};
+</pre
+        >
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Count the Vowels</h2>
+          <p>
+            You are given a string S containing both uppercase and lowercase
+            letters. You need to find out the number of vowels in the given
+            string.<br />
+            <b>Note:</b>You have to complete <b>Count_Vowel function</b>. No
+            need to take any input.
+          </p>
+          <h2>Input Format</h2>
+          <p>The first and only line of the input contains string S .</p>
+          <h2>Output Format</h2>
+          <p>Return the number of Vowels in the string S as output.</p>
+          <h2>Constraints</h2>
+          <p>1 ≤ | S | ≤ 100 , where | S | denotes the length of string S .</p>
+          <h2>Time Limit</h2>
+          <p>1 second</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input <br />
+            prepbytes <br />
+            Sample Output <br />
+            2
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.var Count_Vowels= (S) => 
+    2.{
+    3.let count = 0;
+    4.    const vowels = 'aeiouAEIOU';
+    5.    for (let i = 0; i &lt; S.length; i++) {
+    6.        if (vowels.includes(S[i])) {
+    7.            count++;
+    8.        }
+    9.    }
+    10.    return count;    
+    11.;
+  </pre
+        >
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Concatenate the Strings</h2>
+          <p>
+            You are given two strings S 1 and S 2 (containing both uppercase and
+            lowercase letters), You need to retrun a string which is the
+            concatenation of both the given strings.<br />
+            <b>Note:</b>You have to complete
+            <b>Concatenate_Strings function</b>. No need to take any input.
+          </p>
+          <h2>Input Format</h2>
+          <p>
+            The first line of the input contains the first string S 1 and the
+            second line of input contains the second string S 2 .
+          </p>
+          <h2>Output Format</h2>
+          <p>
+            Return the String S 3 as output, which is the concatenation of given
+            both strings.
+          </p>
+          <h2>Constraints</h2>
+          <p>
+            1 ≤ | S 1 | , | S 2 | ≤ 100 , where | S | denotes the length of
+            string S .
+          </p>
+          <h2>Time Limit</h2>
+          <p>1 second</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input <br />
+            Prep <br />
+            bytes <br />
+            Sample Output <br />
+            prepbytes
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.var Concatenate_Strings = (S1, S2) => 
+    2.{
+    3.   return S1 + S2;     
+    4.};
+    </pre
+        >
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Find Length</h2>
+          <p>
+            You are given a string S , and your task is to return the length of
+            the string S .<br />
+            <b>Note:</b>You have to solve it without using <b>length</b> method.
+            You have to complete <b>findLength function</b>. No need to take any
+            input.
+          </p>
+          <h2>Input Format</h2>
+          <p>The first and the only line of the input contains a string S .</p>
+          <h2>Output Format</h2>
+          <p>Return the length of the string S</p>
+          <h2>Constraints</h2>
+          <p>
+            1 ≤ | S | ≤ 100 , where | S | denotes the length of string S .
+            <br />
+            S contains both lowercase and uppercase alphabets.
+          </p>
+          <h2>Time Limit</h2>
+          <p>1 second</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input <br />
+            CeDqe <br />
+            Sample Output <br />
+            5
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.const findLength = (S) => 
+    2.{
+    3.  let count = 0;
+    4.    for (let i = 0; S[i] != undefined; i++) {
+    5.        count++;
+    6.    }
+    7.    return count;  
+    8.};
+      </pre
+        >
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Find the Winner</h2>
+          <p>
+            You are given a string S consisting of two letters A and D ,where
+            each character represent the winner of N games played between Aditya
+            and Danish, where letter A represents the win of Aditya and letter D
+            represents the win of Danish. You need to find out the that which
+            player wins the maximum number of games or there is a draw between
+            them<br />
+            <b>Note:</b>You have to complete <b>Game_Winner function</b>. No
+            need to take any input.
+          </p>
+          <h2>Input Format</h2>
+          <p>The first and only line of the input contains string S .</p>
+          <h2>Output Format</h2>
+          <p>
+            Return the name of the player who have won the maximum number of
+            games, if both player won same number of games return Draw.
+          </p>
+          <h2>Constraints</h2>
+          <p>1 ≤ | S | ≤ 100 , where | S | denotes the length of string S .</p>
+          <h2>Time Limit</h2>
+          <p>1 second</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input 1 <br />
+            ADDAAADDDDD <br />
+            Sample Output 1 <br />
+            Danish <br />
+            Sample Input 2 <br />
+            ADDAAADD <br />
+            Sample Output 2 <br />
+            Draw
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.var Game_Winner = (S) => 
+    2.{
+    3.  const aditya_count = S.split("A").length - 1;
+    4.    const danish_count = S.split("D").length - 1;
+    5.    if (aditya_count > danish_count) {
+    6.        return "Aditya";
+    7.    } else if (danish_count > aditya_count) {
+    8.        return "Danish";
+    9.    } else {
+    10.        return "Draw";
+    11.    }
+    12.}
+        </pre>
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Join Strings</h2>
+          <p>
+            You are given two strings S and P , and your task is to concatenate
+            them and return the concatenated string.<br />
+            <b>Note:</b>You have to complete <b>joinStrings function</b>. No
+            need to take any input.
+          </p>
+          <h2>Input Format</h2>
+          <p>
+            The first and the only line of the input contains two
+            space-separated strings S and P .
+          </p>
+          <h2>Output Format</h2>
+          <p>Return the final concatenated string.</p>
+          <h2>Constraints</h2>
+          <p>
+            1 ≤ | S | , | P | ≤ 100 , where | S | and |P| denote the length of
+            string S and P , respectively. <br />
+            S and P contain both lowercase and uppercase alphabets.
+          </p>
+          <h2>Time Limit</h2>
+          <p>1 second</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input <br />
+            PrepBytes Technologies <br />
+            Sample Output <br />
+            PrepBytesTechnologies
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.const joinStrings = (S, P) => 
+    2.{
+    3.  return S + P;  
+    4.};
+        </pre>
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Plaindrome Check</h2>
+          <p>
+            You are given a string S , Your task is to check wether the given
+            string is a
+            <span style="font-style: italic; font-weight: 800">Palindrome</span>
+            or not.<br />
+            <span style="font-style: italic; font-weight: 800"
+              >APalindrome</span
+            >
+            is a string, which turnout same when read in reverse direction.
+            Example: "naman" is a Palindrome. String can contain both upppercase
+            lowercase letters. <br />
+            <b>Note:</b>You have to complete <b>Plain_Check function</b>. No
+            need to take any input.
+          </p>
+          <h2>Input Format</h2>
+          <p>The first and the only line of the input contains a string S .</p>
+          <h2>Output Format</h2>
+          <p>
+            Return "True" if the given string is
+            <span style="font-style: italic; font-weight: 800">Palindrome</span>
+            else return "False" (without " ") .
+          </p>
+          <h2>Constraints</h2>
+          <p>
+            1 ≤ | S | ≤ 100 , where | S | denotes the length of string S. <br />
+            S contains both lowercase and uppercase alphabets.
+          </p>
+          <h2>Time Limit</h2>
+          <p>1 second</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input 1 <br />
+            Naman <br />
+            Sample Output 1 <br />
+            False <br />
+            Sample Input 2 <br />
+            naman <br />
+            Sample Output 2 <br />
+            True
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.var Palin_Check = (str) =>
+    2.{
+    3.     const len=str.length;
+    4.     for(let i=0;i&lt;len/2;i++){
+    5.       if(str[i]!==str[len-1-i]){
+    6.         return 'False';
+    7.       }
+    8.     }
+    9.     return 'True';
+    10.}
+        </pre>
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Reverse the String</h2>
+          <p>
+            You are given a string S , Your task is to Reverse the string.
+            <br />
+            String can contain both upppercase lowercase letters. <br />
+            <b>Note:</b>You have to complete <b>Reverse_String function</b>. No
+            need to take any input.
+          </p>
+          <h2>Input Format</h2>
+          <p>The first and the only line of the input contains a string S .</p>
+          <h2>Output Format</h2>
+          <p>Return the reversed String.</p>
+          <h2>Constraints</h2>
+          <p>
+            1 ≤ | S | ≤ 100 , where | S | denotes the length of string S. <br />
+            S contains both lowercase and uppercase alphabets.
+          </p>
+          <h2>Time Limit</h2>
+          <p>1 second</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input <br />
+            I am utkarsh raj <br />
+            Sample Output <br />
+            jar hsraktu ma I
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.    var Reverse_String = (str) => 
+    2.{
+    3.    var newstring="";
+    4.    for(let i=str.length-1;i>=0;i--){
+    5.      newstring+=str[i];
+    6.    }
+    7.    return newstring;
+    8.};
+</pre
+        >
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Match the Strings</h2>
+          <p>
+            You are given two strings S1 and S2 , Your task is to print YES if
+            both strings are same else print NO . <br />
+            <b>Note:</b>You have to complete <b>String_Match function</b>. No
+            need to take any input.
+          </p>
+          <h2>Input Format</h2>
+          <p>
+            The first line of the input contains a string S 1 . <br />
+            The second line of the input contains a string S 2 .
+          </p>
+          <h2>Output Format</h2>
+          <p>Return YES if S1 and S2 are same, else return NO .</p>
+          <h2>Constraints</h2>
+          <p>
+            1 ≤ | S 1 | , | S 2 | ≤ 100 , where | S | denotes the length of
+            string S . <br />
+            S 1 and S 2 contains both lowercase and uppercase alphabets.
+          </p>
+          <h2>Time Limit</h2>
+          <p>1 second</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input <br />
+            Prepbytes <br />
+            Prepbytes <br />
+            Sample Output <br />
+            YES
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.var String_Match = (S1,S2) => 
+    2.{
+    3.  if(S1 === S2){
+    4.    return 'YES';
+    5.  }
+    6.  else {
+    7.    return 'NO';
+    8.  }
+    9.};
+    </pre
+        >
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.String Replace</h2>
+          <p>
+            You are given a string S , along with a pattern string and a text
+            string. <br />
+            You need to repalce the pattern string in S to the text string.
+            <br />
+            <b>Note:</b>You have to complete <b>Replace function</b>. No need to
+            take any input.
+          </p>
+          <h2>Input Format</h2>
+          <p>The first and the only line of the input contains a string S .</p>
+          <h2>Output Format</h2>
+          <p>Return updated String S as output.</p>
+          <h2>Constraints</h2>
+          <p>
+            1 ≤ | S | ≤ 100 , where | S | denotes the length of string S .
+            <br />
+            S contains both lowercase and uppercase alphabets.
+          </p>
+          <h2>Time Limit</h2>
+          <p>1 second</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input <br />
+            Hi, I am You. <br />
+            You <br />
+            Prepbytes <br />
+            Sample Output <br />
+            Hi, I am Prepbytes
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.var Replace = (S, pattern , text) => 
+    2.{
+    3.  return S.replace(pattern, text);    
+    4.};
+    </pre
+        >
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Split the String</h2>
+          <p>
+            You are given a string S , Your task is to split the string with
+            respect to spaces.
+            <br />
+            <b>Note:</b>You have to complete <b>Split_the_String function</b>.
+            No need to take any input.
+          </p>
+          <h2>Input Format</h2>
+          <p>The first and the only line of the input contains a string S .</p>
+          <h2>Output Format</h2>
+          <p>Return the array of splitted strings of S .</p>
+          <h2>Constraints</h2>
+          <p>
+            1 ≤ | S | ≤ 100 , where | S | denotes the length of string S .
+            <br />
+            S contains both lowercase and uppercase alphabets.
+          </p>
+          <h2>Time Limit</h2>
+          <p>1 second</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input <br />
+            I am utkarsh raj<br />
+            Sample Output <br />
+            I <br />
+            am <br />
+            utkarsh <br />
+            raj
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.var Split_the_string = (S) => 
+    2.{
+    3.  return S.split(" ");
+    4.};
+    </pre
+        >
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Count the Vowels and Consonants</h2>
+          <p>
+            You are given a string S containing both uppercase and lowercase
+            letters. <br />
+            You need to find out the number of vowels and the number of
+            consonants in the given string.
+            <br />
+            <b>Note:</b>You have to complete <b>Split_the_String function</b>.
+            No need to take any input.
+          </p>
+          <h2>Input Format</h2>
+          <p>TThe first and only line of the input contains string S .</p>
+          <h2>Output Format</h2>
+          <p>
+            Return the number of Vowels and the number of Consonants in the
+            string S in the functions.
+          </p>
+          <h2>Constraints</h2>
+          <p>1 ≤ | S | ≤ 100 , where | S | denotes the length of string S .</p>
+          <h2>Time Limit</h2>
+          <p>1 second</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input <br />
+            Prepbytes
+            <br />
+            Sample Output <br />
+            2 <br />
+            7
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.var Count_Vowels= (S) => 
+    2.{
+    3.  let vowels = 'aeiouAEIOU';
+    4.    let count = 0;
+    5.    for (let i = 0; i &lt; S.length; i++) {
+    6.        if (vowels.indexOf(S[i]) !== -1) {
+    7.            count++;
+    8.        }
+    9.    }
+    10.    return count;    
+    11.};
+    12.var Count_Consonants= (S) => 
+    13.{
+    14. let vowels = 'aeiouAEIOU';
+    15. let count = 0;
+    16. for (let i = 0; i &lt; S.length; i++) {
+    17. if (vowels.indexOf(S[i]) === -1 && S[i].match(/[a-zA-Z]/i)) {
+    18.       count++;
+    19.     }
+    20.   }
+    21.  return count;     
+    22.};
+      </pre> 
+      </div>
+    </div>
+  </body>
+</html>

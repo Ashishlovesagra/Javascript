@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar"><h1>Problem Solving</h1></nav>
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Find the Smaller Angle</h2>
+          <p>
+            PrepBuddy has an analog clock which consists of two hands one for
+            hour and another for minute. She wants to calculate the shorter
+            angle formed between hour and minute hand at any given time. <br />
+            <b>Note:</b>You have to complete <b>Minimal_Angle function</b>. No
+            need to take any input.
+          </p>
+          <h2>Input Format</h2>
+          <p>
+            The input contains two number h and m , which represents the current
+            time as hour and minutes
+          </p>
+          <h2>Output Format</h2>
+          <p>
+            Return the Minimal angle formed between the Hour hand and Minute
+            hand.
+          </p>
+          <h2>Constraints</h2>
+          <p>All valid times</p>
+          <h2>Time Limit</h2>
+          <p>1 second</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input 1 <br />
+            5 30 <br />
+            Sample Output 1 <br />
+            15 <br />
+            Sample Input 2 <br />
+            6 0 <br />
+            Sample Output 2 <br />
+            180
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.var Minimal_Angle = (h, m) => 
+    2.{
+    3.  var hour_angle = (h * 30) + (0.5 * m);
+    4.  var minute_angle = (m * 6);
+    5.  var angle = Math.abs(hour_angle - minute_angle);
+    6.  return Math.min(360 - angle, angle);     
+    7.};
+</pre
+        >
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Check whether the year is Leap year or not.</h2>
+          <p>
+            Write a program which takes an year N as input from the user and
+            find out whether the given year is a Leap Year or not. <br />
+            <b>Note:</b>You have to complete <b>Check_Leap function</b>. No need
+            to take any input.
+          </p>
+          <h2>Input Format</h2>
+          <p>The input contains a single number N , which represents a year.</p>
+          <h2>Output Format</h2>
+          <p>
+            Return "Leap Year" if the given year is a Leap Year else return "Non
+            Leap Year".
+          </p>
+          <h2>Constraints</h2>
+          <p>1000 ≤ N ≤ 10000</p>
+          <h2>Time Limit</h2>
+          <p>1 second</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input 1 <br />
+            1900 <br />
+            Sample Output 1 <br />
+            Non Leap Year <br />
+            Sample Input 2 <br />
+            2012 <br />
+            Sample Output 2 <br />
+            Leap Year
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.var Check_Leap = (year) => 
+    2.{
+    3.if (year % 4 === 0) {
+    4.if (year % 100 === 0) {
+    5.if (year % 400 === 0) {
+    6.return "Leap Year";
+    7.} else {
+    8.return "Non Leap Year";
+    9.}
+    10.} else {
+    11.return "Leap Year";
+    12.}
+    13.} else {
+    14.return "Non Leap Year";
+    15.}
+    16.};
+  </pre
+        >
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Perfect Number Check.</h2>
+          <p>
+            Have you heard of Perfect numbers? If not let me tell you what is
+            it, Perfect Numbers are integers that are equal to the sum of all
+            its divisors except that number itself. Now, You are given an
+            integer N , write a program to check whether the given number is a
+            Perfect Number or not. <br />
+            <b>Note:</b>You have to complete <b>Perfect _Check function</b>. No
+            need to take any input.
+          </p>
+          <h2>Input Format</h2>
+          <p>The input contains a single number N .</p>
+          <h2>Output Format</h2>
+          <p>
+            Return "YES" if the number is a Perfect Number, else return "NO".
+          </p>
+          <h2>Constraints</h2>
+          <p>1000 ≤ N ≤ 10000</p>
+          <h2>Time Limit</h2>
+          <p>1 second</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input 1 <br />
+            1 <br />
+            Sample Output 1 <br />
+            YES <br />
+            Sample Input 2 <br />
+            96345 <br />
+            Sample Output 2 <br />
+            NO
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.var Perfect_Check = (N) => 
+    2.{
+    3.  let sum = 0;
+    4.for (let i = 1; i &lt; N; i++) {
+    5.if (N % i === 0) {
+    6.sum += i;
+    7.}
+    8.}
+    9.if (sum === N) {
+    10.return "YES";
+    11.} else {
+    12.return "NO";
+    13.}    
+    14.};
+    </pre
+        >
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Reverse a Number.</h2>
+          <p>
+            Write a program which takes a numebr N as input from the user and
+            You need to reverse the number. <br />
+            <b>Note:</b>You have to complete <b>Reverse_Number function</b>. No
+            need to take any input.
+          </p>
+          <h2>Input Format</h2>
+          <p>The input contains a single number N .</p>
+          <h2>Output Format</h2>
+          <p>Return the reversed number.</p>
+          <h2>Constraints</h2>
+          <p>1000 ≤ N ≤ 10000</p>
+          <h2>Time Limit</h2>
+          <p>1 second</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input 1 <br />
+            1900 <br />
+            Sample Output 1 <br />
+            91 <br />
+            Sample Input 2 <br />
+            2012 <br />
+            Sample Output 2 <br />
+            2102
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.var Reverse_Number = (N) => 
+    2.{
+    3.  return parseInt(N.toString().
+    4.  split('').reverse().join(''));
+    5.};
+      </pre
+        >
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Substring Check.</h2>
+          <p>
+            You are given two strings S 1 and S 2 , you need to check whether
+            the string S1 is a substring of string S2 or not. <br />
+            <b>Note:</b>You have to complete <b>Substring_Check function</b>. No
+            need to take any input.
+          </p>
+          <h2>Input Format</h2>
+          <p>
+            The first line of input contains the first string S1. <br />
+            The second line of input contains the second string S2.
+          </p>
+          <h2>Output Format</h2>
+          <p>Return "YES" if S1 is a substring of S2 else return "NO".</p>
+          <h2>Constraints</h2>
+          <p>
+            1 ≤ | S1 | , | S2 | ≤ 100 , where | S | denotes the length of
+            string S .
+          </p>
+          <h2>Time Limit</h2>
+          <p>1 second</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input 1 <br />
+            Hii this is Prepbuddy<br />
+            Prepbuddy <br>
+            Sample Output 1 <br />
+            YES <br />
+            Sample Input 2 <br />
+            Hii this is Prepbuddy <br>
+            Prepbytes <br />
+            Sample Output 2 <br />
+            NO
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.var Substring_Check = (S1, S2) => 
+    2.{
+    3.  if (S1.includes(S2)) {
+    4.        return "YES";
+    5.    } else {
+    6.        return "NO";
+    7.    }   
+    8.};
+        </pre>
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+  </body>
+</html>

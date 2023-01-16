@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Handson-6</title>
+  </head>
+  <body>
+    <nav class="navbar"><h1>Objects</h1></nav>
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Create a Function</h2>
+          <p>
+            Complete the function in the editor. In which you are given one
+            object as a parameter, in that object, there is a data member named
+            <span style="font-style: italic">name</span>. Your task is to create
+            a method inside this object named
+            <span style="font-style: italic">setter</span>, such that this
+            method will print the value of the data member named as
+            <span style="font-style: italic">name</span>.
+          </p>
+          <h2>Input Format</h2>
+          <p>
+            The input will contain one name only, which denotes the only data
+            member of the object.
+          </p>
+          <h2>Output Format</h2>
+          <p>
+            Your task is to create a method inside this object named as
+            <span style="font-style: italic">setter</span>
+            such that this method will print the value of the data member named
+            as a name.
+          </p>
+          <h2>Example</h2>
+          <p>
+            Sample Input <br />
+            Utkarsh <br />
+            Sample Output <br />
+            Utkarsh
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.function Check(obj1){
+    2.  obj1.setter = function(){
+    3.        console.log(obj1.name);
+    4.    } 
+    5.}
+    </pre
+        >
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Delete a Parameter</h2>
+          <p>
+            Complete the function in the editor. You have an object as a
+            parameter. In which you have to delete the rollno property from the
+            object and return the object.
+          </p>
+          <h2>Input Format</h2>
+          <p>
+            You have to give two inputs one name and the second as rollno
+            separated by new line.
+          </p>
+          <h2>Output Format</h2>
+          <p>
+            If you have deleted the rollno property in the object then the code
+            will print "True" otherwise "False".
+          </p>
+          <h2>Example</h2>
+          <p>
+            Sample Input <br />
+            Utkarsh <br />
+            129 <br />
+            Sample Output <br />
+            True
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.function Check(obj1) {
+    2.  if(obj1.hasOwnProperty("rollno")){
+    3.        delete obj1.rollno;
+    4.        return true;
+    5.    }
+    6.    else{
+    7.        return false;
+    8.    }   
+    9.}
+</pre
+        >
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Check whether the Package is Dream Package or not</h2>
+          <p>
+            Complete the function in the editor. In which you are given an
+            object as a parameter. In that object, there is one property named
+            as salary if the salary is maximum than 5 lakh then return "Dream"
+            otherwise return "NotDream".
+          </p>
+          <h2>Input Format</h2>
+          <p>The first Line contains 1 package of a student.</p>
+          <h2>Output Format</h2>
+          <p>
+            If the salary is a maximum of 5 lakh then return "Dream" otherwise
+            return "NotDream".
+          </p>
+          <h2>Example</h2>
+          <p>
+            Sample Input <br />
+            100000 <br />
+            Sample Output <br />
+            NotDream
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.function Check(obj1) {
+    2.  if(obj1.salary > 500000){
+    3.        return "Dream";
+    4.    }
+    5.    else{
+    6.        return "NotDream";
+    7.    }  
+    8.}
+</pre
+        >
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Check whether the Object has a parameter or not</h2>
+          <p>
+            Complete the function in the editor. In which you are given an
+            object as a parameter. You have to return "false" if there is no
+            parameter in the object otherwise return "true".
+          </p>
+          <h2>Input Format</h2>
+          <p>
+            0 as a means no variable in an object and 1 means there are
+            variables in an object.
+          </p>
+          <h2>Output Format</h2>
+          <p>
+            Return "false" if there is no parameter in the object otherwise
+            return "true".
+          </p>
+          <h2>Example</h2>
+          <p>
+            Sample Input <br />
+            1 <br />
+            Sample Output <br />
+            true
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+      1.function Check(obj1) {
+      2.  if(Object.keys(obj1).length === 0) {
+      3.        return false;
+      4.    } else {
+      5.        return true;
+      6.    } 
+      7.}
+      </pre
+        >
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Merge the Objects</h2>
+          <p>
+            Complete the function in the editor. In which you are given two
+            objects as a parameter.In which you have to merge two objects and
+            return a single object.
+          </p>
+          <h2>Input Format</h2>
+          <p>
+            The input consists of four lines, <br />
+            In which first lines contains two data members of first object which
+            are defined as name and id. And the next two lines contains two data
+            members for the second object which are defined as state and code.
+          </p>
+          <h2>Output Format</h2>
+          <p>Just complete the function.</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input <br />
+            Utkarsh <br />
+            129 <br />
+            Haryana <br />
+            121009 <br />
+            Sample Output <br />
+            Utkarsh <br />
+            129 <br />
+            Haryana <br />
+            121009
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.function Check(obj1,obj2) {
+    2.  return Object.assign(obj1, obj2);  
+    3.}
+      </pre
+        >
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Object Multiplyer</h2>
+          <p>
+            Complete the function in the editor. In which you are given an
+            object and a digit N as a parameter.In the object there are two
+            variable id and houseno are defined as a data member. You have to
+            multiply both the data members with a given digit N.
+          </p>
+          <h2>Input Format</h2>
+          <p>
+            There are three line in input, <br />
+            where the first one contains N, And the next two lines contains the
+            first data member i.e. id and second data member i.e. houseno.
+          </p>
+          <h2>Output Format</h2>
+          <p>Just complete the function, No need to print anything.</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input <br />
+            2 <br />
+            12 <br />
+            146 <br />
+            Sample Output <br />
+            24 <br />
+            292
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre></pre>
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Find the sum of Object Members</h2>
+          <p>
+            You are given a function Check which takes an object
+            <span style="font-style: italic">Obj</span> as a parameter. Your
+            taks is to find out the sum of the three data members of the object.
+            The data members are named as p1, p2, p3. <b>Note:</b> You have to
+            complete <b>Check function</b>. No need to take any input
+          </p>
+          <h2>Input Format</h2>
+          <p>
+            The input contains three number p1 , p2 and p3 , which represents
+            the data members of the object
+          </p>
+          <h2>Output Format</h2>
+          <p>Return the sum of all members of the given object.</p>
+          <h2>Constraints</h2>
+          <p>1 ≤ p1 , p2 , p3 ≤ 1000</p>
+          <h2>Time Limit</h2>
+          <p>1 second</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input <br />
+            1 <br />
+            2 <br />
+            3 <br />
+            Sample Output <br />
+            6
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.function Check(obj1) {
+    2.  return obj1.p1 + obj1.p2 + obj1.p3;  
+    3.}
+</pre
+        >
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+    <div class="box">
+      <div class="leftbox">
+        <div class="in">
+          <h2>Q.Merge the Objects</h2>
+          <p>
+            Complete the function in the editor. In which you are given two
+            objects as a parameter.In which you have to merge two objects and
+            return a single object.
+          </p>
+          <h2>Input Format</h2>
+          <p>
+            The input consists of four lines, <br />
+            In which first lines contains two data members of first object which
+            are defined as name and id. And the next two lines contains two data
+            members for the second object which are defined as state and code.
+          </p>
+          <h2>Output Format</h2>
+          <p>Just complete the function.</p>
+          <h2>Example</h2>
+          <p>
+            Sample Input <br />
+            Utkarsh <br />
+            129 <br />
+            Haryana <br />
+            121009 <br />
+            Sample Output <br />
+            Utkarsh <br />
+            129 <br />
+            Haryana <br />
+            121009
+          </p>
+        </div>
+      </div>
+      <div class="rightbox">
+        <h2>&nbsp;&nbsp;&nbsp;&nbsp; Code:-</h2>
+        <pre>
+    1.function Check(obj1,obj2) {
+    2.  return Object.assign(obj1, obj2);  
+    3.}      
+  </pre>
+      </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
+  </body>
+</html>

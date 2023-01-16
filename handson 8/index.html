@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar"><h1>Maps and Sets</h1></nav>
+
+    <div class="question">
+      <h2> Problem 1:</h2> <br>
+      <p>
+        You are given a string (STR) of length N, consisting of only the lower case English alphabet.
+        Your task is to remove all the duplicate occurrences of characters in the string.
+      </p> <br>
+        <h2>Input:</h2> <br>
+        <p>abcadeecfb </p> <br>
+        
+        <h2>Output:</h2> <br>
+        <p>abcdef</p> <br>
+       
+    </div>
+    <div class="answer">
+        <h2>Code:-</h2>
+    <pre>
+        1.function RemoveDuplicates(str) {
+        2.    let seen = new Set();
+        3.    let output = '';
+        4.
+        5.    for (let i = 0; i < str.length; i++) {
+        6.        if (!seen.has(str[i])) {
+        7.            seen.add(str[i]);
+        8.            output += str[i];
+        9.        }
+        10.    }
+        11.
+        12.    return output;
+        13.}
+    </pre>
+    </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+        <h2> Problem 2:</h2> <br>
+        <p>
+          You are given a string (STR) of length N, consisting of only the lower case English alphabet.
+          Your task is to remove all the duplicate occurrences of characters in the string.
+        </p> <br>
+          <h2>Input:</h2> <br>
+          <p>abcadeecfb</p> <br>
+          
+          <h2>Output:</h2> <br>
+          <p>a=2 <br>
+            b=2  <br>
+            c=2  <br>
+            d=1  <br>
+            e=2  <br>
+            f=1  
+        </p>
+      </div>
+      <div class="answer">
+          <h2>Code:-</h2>
+      <pre>
+        1.function countAlphabet(str) {
+        2.    let countMap = new Map();
+        3.
+        4.    for (let i = 0; i < str.length; i++) {
+        5.        if (!countMap.has(str[i])) {
+        6.            countMap.set(str[i], 1);
+        7.        } else {
+        8.            countMap.set(str[i], countMap.get(str[i]) + 1);
+        9.        }
+        10.    }
+        11.
+        12.    for (let [key, value] of countMap.entries()) {
+        13.        console.log(key + "=" + value);
+        14.    }
+        15.}
+        16.  countAlphabet("abcadeecfb");
+      </pre>
+      </div>
+      <!-- --------------------------------------------------------------------------- -->
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar"><h1>DOM</h1></nav>
+
+    <div class="question">
+      <h2>Problem 1:</h2>
+      <br />
+      <p>Write the code to access element which is having id as "text"</p>
+    </div>
+    <div class="answer">
+      <h2>Code:-</h2>
+      <pre>
+        var element = document.getElementById("text");
+    </pre>
+    </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+      <h2>Problem 2:</h2>
+      <br />
+      <p>
+        Write the code to access element which is having tag as "h1"
+      </p>
+    </div>
+    <div class="answer">
+      <h2>Code:-</h2>
+      <pre>
+        var elements = document.getElementsByTagName("h1");
+      </pre>
+    </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+      <h2>Problem 3:</h2>
+      <br />
+      <p>Write the code to access element which is having class as "box"</p>
+    </div>
+    <div class="answer">
+      <h2>Code:-</h2>
+      <pre>
+        var elements = document.getElementsByClassName("box");
+        </pre>
+    </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+        <h2>Problem 4:</h2>
+        <br />
+        <p>&lt;h1&#62;Hello &lt;/h1&#62; <br>
+         Change the heading from ""Hello"" to ""Hello World"" using DOM functions"</p>
+      </div>
+      <div class="answer">
+        <h2>Code:-</h2>
+        <pre>
+            &#60;div&#62;
+            &#60;h1&#62;Hello&#60;/h1&#62;
+            &#60;/div&#62;
+        
+            &#60;script&#62;
+                var heading = document.getElementsByTagName("h1")[0]; 
+                heading.innerHTML = "Hello World"; 
+        
+            &#60;/script&#62;
+        </pre>
+      </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+      <h2>Problem 5:</h2>
+      <br />
+      <p>
+        Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button at the bottom named "Change Flex direction". When user clicks on this button, the cards arrangement should be changed to vertical direction.
+      </p>
+    </div>
+    <div class="answer">
+      <h2>Code:-</h2>
+      <pre>
+        &#60;div id="container"&#62;
+        &#60;div class="card"&#62;Card 1&#60;/div&#62;
+        &#60;div class="card"&#62;Card 2&#60;/div&#62;
+        &#60;div class="card"&#62;Card 3&#60;/div&#62;
+        &#60;/div>
+      
+        &#60;button id="change-direction-btn"&#62;Change Flex direction&#60;/button&#62;
+      
+        &#60;script&#62;
+            var container = document.getElementById("container");
+            var button = document.getElementById("change-direction-btn");
+      
+            button.addEventListener("click", function () {
+              if (container.style.flexDirection === "row") {
+                container.style.flexDirection = "column";
+              } else {
+                container.style.flexDirection = "row";
+              }
+            });
+        &#60;/script&#62;
+
+      </pre>
+    </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+      <h2>Problem 6:</h2>
+      <br />
+      <p>
+        What’s the difference between window vs document?
+      </p>
+    </div>
+    <div class="answer">
+      <h2>Answer:-</h2> <br>
+        <p>In a web browser, the window object represents the current browser window or tab, and provides access to the browser's JavaScript environment. It contains many properties and methods that provide information about the browser and the current page, such as the location property (which provides information about the current URL), the setTimeout and setInterval methods (which can be used to schedule code to run at a later time), and the alert method (which displays a message to the user).</p> <br>
+        <p>The document object, on the other hand, represents the current web page and provides access to the Document Object Model (DOM), which is a representation of the structure of the HTML and XML documents. It allows you to manipulate the contents of the page, such as adding or removing elements, changing the styles of elements, and listening for events. The document object contains methods such as getElementById and querySelector that can be used to access specific elements on the page, and it also has a body property that provides access to the &#60;body&#62; element of the page.</p> <br>
+        <p>The window object is a parent object of the document object, so you can access document object by using window.document.</p> <br>
+        <p>In short, window object is the global object that represents the browser window, while document is an object that represents the current web page and allows you to interact with its contents.</p>
+    </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+        <h2>Problem 7:</h2>
+        <br />
+        <p>"&lt;h1&#62;Hello &lt;/h1&#62; <br>
+
+        Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" in the above given h1 tag using DOM functions"</p>
+      </div>
+      <div class="answer">
+        <h2>Code:-</h2>
+        <pre>
+            &#60;div&#62;
+            &#60;h1&#62;Ashish&#60;/h1&#62;
+            &#60;/div&#62;
+          
+            &#60;script&#62;
+                var heading = document.getElementsByTagName("h1")[0];
+                heading.id = "heading";
+                heading.style.color = "red";
+            &#60;/script&#62;
+        </pre>
+      </div>
+      <!-- --------------------------------------------------------------------------- -->
+      
+    <div class="question">
+        <h2>Problem 8:</h2>
+        <br />
+        <p>Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"</p>
+      </div>
+      <div class="answer">
+        <h2>Code:-</h2>
+        <pre>
+            &#60;div id="content"&#62;Hello world&#60;/div&#62;
+            &#60;button id="replace-btn"&#62;Replace Text&#60;/button&#62;
+        
+            &#60;script&#62;
+              var content = document.getElementById("content");
+              var button = document.getElementById("replace-btn");
+              
+              button.addEventListener("click", function () {
+                content.innerHTML = "Welcome to Elevation academy";
+              });
+              &#60;/script&#62;
+        </pre>
+      </div>
+      <!-- --------------------------------------------------------------------------- -->
+      <div class="question">
+        <h2>Problem 9:</h2>
+        <br />
+        <p>Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second</p>
+      </div>
+      <div class="answer">
+        <h2>Code:-</h2>
+        <pre>
+            &#60;div id="txt"&#62;&#60;/div&#62;
+
+            &#60;script&#62;
+              function startTime() {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
+                var t = setTimeout(startTime, 1000);
+              }
+              function checkTime(i) {
+                if (i &#60; 10) {
+                  i = "0" + i;
+                }
+                return i;
+              }
+              startTime();
+            &#60;/script&#62;
+        </pre>
+      </div>
+      <!-- --------------------------------------------------------------------------- -->
+      <div class="question">
+        <h2>Problem 10:</h2>
+        <br />
+        <p>Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item text selected</p>
+      </div>
+      <div class="answer">
+        <h2>Code:-</h2>
+        <pre>
+            &#60;select id="year-select"&#62;
+            &#60;option value="20-21"&#62;20-21&#60;/option&#62;
+            &#60;option value="21-22"&#62;21-22&#60;/option&#62;
+            &#60;option value="22-23"&#62;22-23&#60;/option&#62;
+                
+            &#60;/select&#62;
+            &#60;script&#62;
+                var select = document.getElementById("year-select");
+                select.addEventListener("change", function () {
+                  var selectedOption = select.options[select.selectedIndex];
+                  console.log(selectedOption.text);
+                });
+            &#60;/script&#62;
+        </pre>
+      </div>
+      <!-- --------------------------------------------------------------------------- -->
+  </body>
+</html>

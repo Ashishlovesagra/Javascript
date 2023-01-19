@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar"><h1>Closure</h1></nav>
+
+    <div class="question">
+      <h2>Problem 1:</h2>
+      <br />
+      <pre>
+            function counter(){
+            var counter = 0;
+        
+            function IncreaseCounter() {
+                return counter += 1;
+            };
+        
+            return IncreaseCounter;
+        }
+        
+          var counter = counter();
+          alert(counter());
+          alert(counter());
+          alert(counter());
+          alert(counter());
+    </pre
+      >
+    </div>
+    <div class="answer">
+      <h2>Output</h2>
+      <p></p>
+    </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+      <h2>Problem 2:</h2>
+      <br />
+      <pre>
+         let count = 0;
+         (function () {
+         if (count === 0) {
+         let count = 1;
+         console.log(count); // What is logged?
+         }
+         console.log(count); // What is logged?
+         })();"
+    </pre
+      >
+    </div>
+    <div class="answer">
+        <h2>Output</h2>
+        <p></p>
+      </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+      <h2>Problem 3:</h2>
+      <br />
+    <pre>
+        for (var i = 0; i &lt; 3; i++) {
+            setTimeout(function log() {
+              console.log(i); // What is logged?
+            }, 1000);
+          }
+    </pre>
+    </div>
+    <div class="answer">
+        <h2>Output</h2>
+        <p></p>
+      </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+      <h2>Problem 4:</h2>
+      <br />
+      <p>Write a code to calculate area of a rectangle using inner function. In this case outer function should accept parameter length and inner function should accept parameter breadth.</p>
+    </div>
+    <div class="answer">
+      <h2>Code:-</h2>
+    <pre>
+
+    </pre>
+    </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+      <h2>Problem 5:</h2>
+      <br />
+    <p>Take a variable in outer function and create an inner function to increase the counter every time it is called</p>
+    </div>
+    <div class="answer">
+        <h2>Code:-</h2>
+      <pre>
+  
+      </pre>
+      </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+      <h2>Problem 6:</h2>
+      <br />
+    <pre>
+        "Print Output
+
+         var a = 12;
+         (function () {
+           alert(a);
+         })();"
+    </pre>
+    </div>
+    <div class="answer">
+      <h2>Output</h2>
+      <p></p>
+    </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+      <h2>Problem 7:</h2>
+      <br />
+    <pre>
+        "var a = 10;
+         var x = (function () {
+         var a = 12;
+         return function () {
+         alert(a);
+         };
+         })();
+         x();"
+    </pre>
+    </div>
+    <div class="answer">
+        <h2>Output</h2>
+        <p></p>
+      </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+        <h2>Problem 8:</h2>
+        <br />
+      <pre>
+        "var globalVar = ""xyz"";
+
+        (function outerFunc(outerArg) {
+         var outerVar = 'a';
+    
+        (function innerFunc(innerArg) {
+         var innerVar = 'b';
+    
+        console.log(
+        ""outerArg = "" + outerArg + ""\n"" +
+        ""innerArg = "" + innerArg + ""\n"" +
+        ""outerVar = "" + outerVar + ""\n"" +
+        ""innerVar = "" + innerVar + ""\n"" +
+        ""globalVar = "" + globalVar);
+    
+        })(456);
+        })(123);"
+      </pre>
+      </div>
+      <div class="answer">
+          <h2>Output</h2>
+          <p></p>
+        </div>
+      <!-- --------------------------------------------------------------------------- -->
+  </body>
+</html>

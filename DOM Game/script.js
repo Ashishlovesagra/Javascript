@@ -4,11 +4,11 @@ let highscore=null;
 let randomnumber = generateRandomInteger(100);
 function reloadgame(){
     document.getElementById('guessid').value="";
-    document.querySelector('.score').textContent=100
-    document.querySelector('#sc').textContent="Start guessing..."
-    document.body.style.backgroundColor="#222";
-    document.querySelector('.number').style.height="12rem"
-    document.querySelector('.number').textContent="?";
+    document.getElementsByClassName('score').textContent=100
+    document.getElementById('sc').textContent="Start guessing..."
+    document.body.style.backgroundColor="yellow";
+    document.getElementsByClassName('number').style.height="12rem"
+    document.getElementsByClassName('number').textContent="?";
      randomnumber = generateRandomInteger(100);
 }
 
@@ -18,36 +18,36 @@ function generateRandomInteger(max) {
    
   function maincheck(){
           
-       let inputnumber= document.querySelector('#guessid').value
+       let inputnumber= document.getElementById('guessid').value
 
     if(initialscore!==0){
        if(inputnumber>randomnumber ){
-       document.querySelector('.message').textContent="Your Guess Is High"
+       document.getElementById('sc').textContent="Your Guess Is High"
            initialscore--
-         document.querySelector('.score').textContent=initialscore
+         document.getElementsByClassName('score').textContent=initialscore
        }
        else if(inputnumber<randomnumber){
-        document.querySelector('.message').textContent="Your Guess Is Low"
+        document.getElementById('sc').textContent="Your Guess Is Low"
         initialscore--
-        document.querySelector('.score').textContent=initialscore
+        document.getElementsByClassName('score').textContent=initialscore
        }
        else{
 
-        document.querySelector('.message').textContent="🤩🤩 Hurray You Won 🤩🤩"
+        document.getElementById('sc').textContent="🤩🤩 Hurray You Won 🤩🤩"
         document.body.style.backgroundColor="green";
         initialscore--
-        document.querySelector('.score').textContent=initialscore
-        document.querySelector('.number').textContent=randomnumber;
-        document.querySelector('.number').style.height="10rem"
+        document.getElementsByClassName('score').textContent=initialscore
+        document.getElementsByClassName('number').textContent=randomnumber;
+        document.getElementsByClassName('number').style.height="10rem"
          highscore=initialscore
-          document.querySelector('.highscore').textContent=highscore
-          document.querySelector('.check').style.visibility="hidden" 
+          document.getElementsByClassName('highscore').textContent=highscore
+          document.getElementsByClassName('check').style.visibility="hidden" 
         
              
         
        }
     } else{
-        document.querySelector('.message').textContent="Game Over 🙂 🙂 your score is 0"
+        document.getElementsByClassName('message').textContent="Game Over 🙂 🙂 your score is 0"
         
     }
        

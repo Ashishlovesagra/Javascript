@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Promises Async Await</title>
+  </head>
+  <body>
+    <nav class="navbar"><h1>Promises Async Await</h1></nav>
+
+    <div class="question">
+      <h2>Problem 1:</h2>
+      <br />
+      <p>
+        Write one example explaining how you can write a callback function ?
+      </p>
+    </div>
+    <div class="answer">
+      <h2>Output:-</h2>
+      <pre>
+        function processString(str, callback) {
+            callback(str);
+          }
+          
+          function printString(str) {
+            console.log(str);
+          }
+          
+          processString("Hello, World!", printString); 
+    </pre
+      >
+    </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+      <h2>Problem 2:</h2>
+      <br />
+      <p>
+        "Write callback function to print numbers from 1 to 7, in which 1 should
+        be printed after 1 sec , 2 should be printed after 2 sec, 3 should be
+        printed after 3 sec and so on. <br />
+        <br />
+        Explain callback hell. <br />
+        Numbers <br />
+        1 <br />
+        2 <br />
+        3 <br />
+        4 <br />
+        5 <br />
+        6 <br />
+        7" <br />
+      </p>
+    </div>
+    <div class="answer">
+      <h2>Output:-</h2>
+      <pre>
+          function processString(str, callback) {
+              callback(str);
+            }
+            
+            function printString(str) {
+              console.log(str);
+            }
+            
+            processString("Hello, World!", printString); 
+      </pre>
+    </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+      <h2>Problem 3:</h2>
+      <br />
+      <p>
+        "Write the promise function to print numbers from 1 to 7, in which 1
+        should be printed after 1 sec, 2 should be printed after 2 sec, 3 should
+        be printed after 3 sec, and so on. <br />
+        <br />
+        Numbers <br />
+        1 <br />
+        2 <br />
+        3 <br />
+        4 <br />
+        5 <br />
+        6 <br />
+        7" <br />
+      </p>
+    </div>
+    <div class="answer">
+      <h2>Output:-</h2>
+      <pre>
+        const delay = (sec) => {
+          return new Promise((resolve) => {
+            setTimeout(() => {
+              resolve();
+            }, sec * 1000);
+          });
+        };
+        
+        async function printNumbers() {
+          for (let i = 1; i <= 7; i++) {
+            await delay(i);
+            console.log(i);
+          }
+        }
+        
+        printNumbers();
+      </pre>
+    </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+      <h2>Problem 4:</h2>
+      <br />
+      <p>
+        "Create a promise function accepting an argument, if yes is passed to
+        the function then it should go to resolved state and print Promise
+        Resolved, and if nothing is passed then it should go to reject the state
+        and catch the error and print Promise Rejected "
+      </p>
+    </div>
+    <div class="answer">
+      <h2>Output:-</h2>
+      <pre>
+        function myPromise(input) {
+          return new Promise((resolve, reject) => {
+            if (input === 'yes') {
+              resolve('Promise Resolved');
+            } else {
+              reject(new Error('Promise Rejected'));
+            }
+          });
+        }
+        
+        myPromise('yes')
+          .then((result) => {
+            console.log(result);
+          })
+          .catch((error) => {
+            console.error(error.message);
+          });
+        
+        myPromise()
+          .then((result) => {
+            console.log(result);
+          })
+          .catch((error) => {
+            console.error(error.message);
+          });        
+      </pre>
+    </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+      <h2>Problem 5:</h2>
+      <br />
+      <p>Create examples to explain callback function</p>
+    </div>
+    <div class="answer">
+      <h2>Answer:-</h2>
+      <br />
+      <p>
+        A callback function is a function passed as an argument to another
+        function, which is then executed inside the outer function. Callback
+        functions are commonly used in JavaScript to handle asynchronous events.
+        Here are a few examples to explain how callback functions work:
+      </p>
+      <br />
+      <p>Example 1: Simple callback function</p>
+      <br />
+      <pre>
+        function greeting(name, callback) {
+          console.log(`Hello, ${name}!`);
+          callback();
+        }
+        
+        function sayGoodbye() {
+          console.log('Goodbye!');
+        }
+        
+        greeting('John', sayGoodbye);        
+      </pre>
+      <h2>Output:-</h2>
+      <br />
+      <p>
+        Hello, John! <br />
+        Goodbye!
+      </p>
+      <br />
+      <p>Example 2: Callback function with parameters</p>
+      <br />
+      <pre>
+          function processData(data, callback) {
+            console.log(`Processing data: ${data}`);
+            const processedData = data.toUpperCase();
+            callback(processedData);
+          }
+          
+          function printData(processedData) {
+            console.log(`Data: ${processedData}`);
+          }
+          
+          processData('hello', printData);                  
+        </pre
+      >
+      <h2>Output:-</h2>
+      <br />
+      <p>
+        Processing data: hello <br />
+        Data: HELLO
+      </p>
+      <br />
+      <p>Example 3: Callback function with error handling</p>
+      <br />
+      <pre>
+            function divideNumbers(a, b, callback) {
+              if (b === 0) {
+                callback(new Error('Cannot divide by zero'));
+              } else {
+                const result = a / b;
+                callback(null, result);
+              }
+            }
+            
+            function handleResult(error, result) {
+              if (error) {
+                console.error(error.message);
+              } else {
+                console.log(`Result: ${result}`);
+              }
+            }
+            
+            divideNumbers(10, 2, handleResult);
+            divideNumbers(10, 0, handleResult);                              
+          </pre
+      >
+      <h2>Output:-</h2>
+      <br />
+      <p>
+        Result: 5 <br />
+        Error: Cannot divide by zero
+      </p>
+    </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+      <h2>Problem 6:</h2>
+      <br />
+      <p>Create examples to explain callback hell function</p>
+    </div>
+    <div class="answer">
+      <h2>Answer:-</h2>
+      <br />
+      <p>
+        Callback Hell is a situation in which multiple nested callback functions
+        make the code hard to read, maintain and debug. It happens when we chain
+        multiple async operations, each of which requires a callback, resulting
+        in code that becomes deeply nested. Here's an example of callback hell:
+      </p>
+      <br />
+      <pre>
+        fs.readFile('file1.txt', function (error1, data1) {
+          if (error1) {
+            console.error(error1);
+          } else {
+            fs.readFile('file2.txt', function (error2, data2) {
+              if (error2) {
+                console.error(error2);
+              } else {
+                fs.readFile('file3.txt', function (error3, data3) {
+                  if (error3) {
+                    console.error(error3);
+                  } else {
+                    // do something with data1, data2 and data3
+                  }
+                });
+              }
+            });
+          }
+        });        
+      </pre>
+      <br />
+      <p>
+        As you can see, the code becomes harder to read the deeper we go into
+        the nested callbacks. This makes the code difficult to maintain and
+        debug, and it becomes more challenging to understand the flow of
+        execution. To avoid callback hell, we can use promises or async/await,
+        which provide a cleaner way to handle asynchronous code.
+      </p>
+    </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+      <h2>Problem 7:</h2>
+      <br />
+      <p>Create examples to explain callback hell function</p>
+    </div>
+    <div class="answer">
+      <h2>Answer:-</h2>
+      <br />
+      <p>
+        A Promise is an object representing the eventual completion or failure
+        of an asynchronous operation. Promises provide a way to handle
+        asynchronous operations in a cleaner and more readable way compared to
+        traditional callback-based approaches. Here are a few examples to
+        explain how Promises work in JavaScript:
+      </p>
+      <br />
+      <p>Example 1: Simple promise</p>
+      <br />
+      <pre>
+        const promise = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve('Hello from the future!');
+          }, 1000);
+        });
+        
+        promise
+          .then((result) => {
+            console.log(result);
+          })
+          .catch((error) => {
+            console.error(error.message);
+          });              
+      </pre>
+      <br />
+      <p>Example 2: Promise with error handling</p>
+      <br />
+      <pre>
+        const promise = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            const randomNumber = Math.random();
+            if (randomNumber > 0.5) {
+              resolve(randomNumber);
+            } else {
+              reject(new Error(`Random number is too small: ${randomNumber}`));
+            }
+          }, 1000);
+        });
+        
+        promise
+          .then((result) => {
+            console.log(`Random number: ${result}`);
+          })
+          .catch((error) => {
+            console.error(error.message);
+          });        
+      </pre>
+      <br />
+      <p>Example 3: Chaining promises</p>
+      <br />
+      <pre>
+        function getData(file) {
+          return new Promise((resolve, reject) => {
+            fs.readFile(file, function (error, data) {
+              if (error) {
+                reject(error);
+              } else {
+                resolve(data);
+              }
+            });
+          });
+        }
+        
+        getData('file1.txt')
+          .then((data1) => {
+            console.log(`Data from file 1: ${data1}`);
+            return getData('file2.txt');
+          })
+          .then((data2) => {
+            console.log(`Data from file 2: ${data2}`);
+            return getData('file3.txt');
+          })
+          .then((data3) => {
+            console.log(`Data from file 3: ${data3}`);
+          })
+          .catch((error) => {
+            console.error(error.message);
+          });        
+      </pre>
+      <br />
+      <p>
+        In this example, we use chaining to handle multiple async operations,
+        each returning a promise. The then method returns a new promise,
+        allowing us to chain multiple operations, resulting in a cleaner and
+        more readable code. The catch method can be used to handle any errors
+        that may occur during the processing.
+      </p>
+    </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+      <h2>Problem 8:</h2>
+      <br />
+      <p>Create examples to explain async await function</p>
+    </div>
+    <div class="answer">
+      <h2>Answer:-</h2>
+      <br />
+      <p>
+        Async/Await is a way to handle asynchronous code in a more readable and
+        synchronized manner in JavaScript. It provides a way to write
+        asynchronous code that looks and behaves like synchronous code.
+      </p>
+      <br />
+      <p>
+        Here are a few examples to explain how async/await works in JavaScript:
+      </p>
+      <br />
+      <p>Example 1: Simple async/await example</p>
+      <br />
+      <pre>
+        async function helloFromTheFuture() {
+          return new Promise((resolve, reject) => {
+            setTimeout(() => {
+              resolve('Hello from the future!');
+            }, 1000);
+          });
+        }
+        
+        async function logHello() {
+          try {
+            const message = await helloFromTheFuture();
+            console.log(message);
+          } catch (error) {
+            console.error(error.message);
+          }
+        }
+        
+        logHello();        
+      </pre>
+      <br />
+      <p>Example 2: Async/await with error handling</p>
+      <br />
+      <pre>
+        async function getRandomNumber() {
+          return new Promise((resolve, reject) => {
+            setTimeout(() => {
+              const randomNumber = Math.random();
+              if (randomNumber > 0.5) {
+                resolve(randomNumber);
+              } else {
+                reject(new Error(`Random number is too small: ${randomNumber}`));
+              }
+            }, 1000);
+          });
+        }
+        
+        async function logRandomNumber() {
+          try {
+            const randomNumber = await getRandomNumber();
+            console.log(`Random number: ${randomNumber}`);
+          } catch (error) {
+            console.error(error.message);
+          }
+        }
+        
+        logRandomNumber();        
+      </pre>
+      <br />
+      <p>Example 3: Chaining async/await operations</p>
+      <br />
+      <pre>
+        async function getData(file) {
+          return new Promise((resolve, reject) => {
+            fs.readFile(file, function (error, data) {
+              if (error) {
+                reject(error);
+              } else {
+                resolve(data);
+              }
+            });
+          });
+        }
+        
+        async function logData() {
+          try {
+            const data1 = await getData('file1.txt');
+            console.log(`Data from file 1: ${data1}`);
+        
+            const data2 = await getData('file2.txt');
+            console.log(`Data from file 2: ${data2}`);
+        
+            const data3 = await getData('file3.txt');
+            console.log(`Data from file 3: ${data3}`);
+          } catch (error) {
+            console.error(error.message);
+          }
+        }
+        
+        logData();        
+      </pre>
+      <br />
+      <p>
+        In this example, we use async/await to handle multiple async operations,
+        each returning a promise. With async/await, we can write asynchronous
+        code that behaves like synchronous code. The await keyword is used to
+        wait for a promise to be resolved before executing the next line of
+        code. The try/catch statement is used to handle any errors that may
+        occur during the processing
+      </p>
+    </div>
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="question">
+      <h2>Problem 9:</h2>
+      <br />
+      <p>Create examples to explain promise.all function</p>
+    </div>
+    <div class="answer">
+      <h2>Answer:-</h2>
+      <br />
+      <p>
+        The Promise.all() method is used in JavaScript to handle multiple
+        promises as a single unit. It returns a new promise that resolves when
+        all of the promises passed to it as an argument have been resolved, or
+        rejects with the reason of the first promise that is rejected.
+      </p>
+      <br />
+      <p>
+        Here are a few examples to explain how Promise.all() works in
+        JavaScript:
+      </p>
+      <br />
+      <p>Example 1: Simple Promise.all() example</p>
+      <br />
+      <pre>
+        const promise1 = Promise.resolve('Hello');
+        const promise2 = 10;
+        const promise3 = new Promise((resolve, reject) => {
+          setTimeout(resolve, 1000, 'Goodbye');
+        });
+
+        Promise.all([promise1, promise2, promise3]).then(values => {
+          console.log(values);
+        });
+      </pre>
+      <br />
+      <p>Example 2: Handling errors with Promise.all()</p>
+      <br />
+      <pre>
+        const promise1 = Promise.resolve('Hello');
+        const promise2 = 10;
+        const promise3 = new Promise((resolve, reject) => {
+          setTimeout(reject, 1000, 'Error');
+        });
+        
+        Promise.all([promise1, promise2, promise3]).then(values => {
+          console.log(values);
+        }).catch(error => {
+          console.error(error);
+        });        
+      </pre>
+      <br />
+      <p>Example 3: Using Promise.all() with asynchronous operations</p>
+      <br />
+      <pre>
+        function getData(url) {
+          return new Promise((resolve, reject) => {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', url);
+            xhr.onload = function () {
+              if (xhr.status === 200) {
+                resolve(xhr.response);
+              } else {
+                reject(xhr.statusText);
+              }
+            };
+            xhr.onerror = function () {
+              reject(xhr.statusText);
+            };
+            xhr.send();
+          });
+        }
+        
+        const promise1 = getData('data1.json');
+        const promise2 = getData('data2.json');
+        const promise3 = getData('data3.json');
+        
+        Promise.all([promise1, promise2, promise3]).then(values => {
+          console.log(values);
+        }).catch(error => {
+          console.error(error);
+        });        
+      </pre>
+      <br />
+      <p>
+        In this example, Promise.all() is used to wait for multiple asynchronous
+        operations to complete. The getData function is used to fetch data from
+        a URL and returns a promise that resolves with the response data. By
+        passing an array of promises to Promise.all(), we can wait for all of
+        the data to be fetched before logging the values to the console. If any
+        of the promises are rejected, the catch block will be executed and the
+        error will be logged to the console.
+      </p>
+    </div>
+    <!-- --------------------------------------------------------------------------- -->
+  </body>
+</html>
